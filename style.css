@@ -81,6 +81,141 @@ h6,
   line-height: var(--heading-line-height);
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 95%;
+  }
+  
+  .title-xlarge {
+    font-size: calc(1.5rem + 5vw);
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    padding: 1rem 0;
+  }
+  
+  .search-popup .cat-list-item,
+  .search-popup-form .form-control {
+    font-size: 1.2em;
+  }
+  
+  .testimonial-swiper .testimonial-item blockquote {
+    font-size: 1.5em;
+  }
+  
+  .product-thumbnail-slider {
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-arrow {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .icon-arrow.icon-arrow-left {
+    left: 10px; 
+  }
+  
+  .icon-arrow.icon-arrow-right {
+    right: 10px;
+  }
+  
+  .testimonial-swiper .swiper-slide {
+    width: 80% !important;
+  }
+  
+  .product-info .swatch-element .swatch-label {
+    min-width: 40px;
+    height: 40px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-popup .cat-list-item,
+  .search-popup-form .form-control {
+    font-size: 1em;
+  }
+  
+  .search-popup .search-popup-close {
+    top: 0.5em;
+    right: 0.5em;
+  }
+  
+  .testimonial-swiper .testimonial-item blockquote {
+    font-size: 1.1em;
+  }
+  
+  .product-quantity .input-group .btn {
+    height: 40px;
+  }
+  
+  .qty-number input {
+    width: 40px;
+    height: 35px;
+  }
+  
+  .single-product-template .breadcrumbs li {
+    font-size: 1.2em;
+  }
+}
+
+/* Ajustes para imágenes responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajustes para el menú móvil */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 75%;
+    height: 100%;
+    background: #fff;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+  
+  .navbar-toggler {
+    z-index: 1000;
+  }
+}
+
+/* Ajustes para grids y columnas */
+@media (max-width: 768px) {
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 h1.light,
 .h1,
 h2.light,
